@@ -1,0 +1,35 @@
+$FUN $isPalindromeRecursive
+    LDV 0
+    BLD 0 0
+    LNT
+    BT +14
+    BLD 0 0
+    LTK
+    BLD 0 1
+    LTK
+    LDV 1
+    LTK
+    LDF $isPalindromeRecursive
+    APP
+    LDV 0
+    LTK
+    BLD 0 1
+    EQ
+    BT +4
+    RET
+    LDV 0
+    RET
+    LDV 1
+    RET
+$END $isPalindromeRecursive
+
+$FUN $main
+    LDV [1,2,3,2,1]
+    LDF $isPalindromeRecursive
+    APP
+    PRN
+    HLT
+$END $main
+
+INI $main
+

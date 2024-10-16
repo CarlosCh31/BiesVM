@@ -1,0 +1,24 @@
+$FUN $print args:1 parent:$main
+BLD 1 0
+PRN
+RET
+$END $print
+
+$FUN $main args:0 parent:$main
+LDF $print
+BST 0 0
+LDV 1
+BST 0 1
+LDV 656
+BST 0 2
+BLD 0 1
+LDV 10
+MUL
+BLD 0 2
+ADD
+BLD 0 0
+APP
+HLT
+$END $main
+
+INI $main

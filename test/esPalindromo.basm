@@ -1,0 +1,40 @@
+$FUN $isPalindromeIterativeTailCall
+    LDV 0
+    BLD 0 0
+    LNT
+    BT -34
+    BLD 0 0
+    LDV 0
+    LTK
+    BLD 0 0
+    LNT
+    BT -38
+    BLD 0 0
+    LDV 0
+    LTK
+    BLD 0 1
+    LDV 0
+    LTK
+    EQ
+    BF +9
+    BLD 0 1
+    LDV 0
+    TAIL_CALL $isPalindromeIterativeTailCall
+    RET
+    BR +5
+not_palindrome:
+    LDV 0
+    RET
+empty_list:
+    LDV 1
+    RET
+$END $isPalindromeIterativeTailCall
+
+$FUN $main
+    LDV [1, 2, 3, 2, 1]
+    LDF $isPalindromeIterativeTailCall
+    APP
+    PRN
+    HLT
+$END $main
+

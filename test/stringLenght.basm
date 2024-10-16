@@ -1,0 +1,26 @@
+$FUN $1 args:1 parent:$0
+LDV 0
+BST 0 1
+BLD 0 0
+SNT
+BT +7
+LDV 1
+SRK
+BLD 0 1
+LDV 1
+ADD
+BST 0 1
+BR -9
+BLD 0 1
+RET
+$END $1
+
+$FUN $0 args:0 parent:$0
+LDV hello
+LDF $1
+APP 1
+PRN
+HLT
+$END $0
+
+INI $0

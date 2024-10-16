@@ -1,0 +1,29 @@
+$FUN $indexOfIterative
+    LDV 0
+    BLD 0 0
+    BLD 0 1
+    LNT
+    BT +11
+    BLD 0 0
+    BLD 0 1
+    LTK
+    BLD 0 2
+    EQ
+    BT +4
+    LDV 1
+    ADD
+    BR -14
+    BLD 0 0
+    RET
+$END $indexOfIterative
+
+$FUN $main
+    LDV "hello world"
+    LDV "world"
+    LDV 0
+    LDF $indexOfIterative
+    APP 3
+    PRN
+    HLT
+$END $main
+

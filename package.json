@@ -1,0 +1,17 @@
+{
+  "name": "biesvm",
+  "version": "1.0.0",
+  "description": "Maquina virtual bies con archivos .basm.",
+  "main": "src/main.js",
+  "type": "module",
+  "bin": {
+    "biesVM": "./src/main.js"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "generate-parser": "java -jar lib/antlr-4.13.2-complete.jar -Dlanguage=JavaScript -o gen grammar/biesASM.g4"
+  },
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  }
+}
